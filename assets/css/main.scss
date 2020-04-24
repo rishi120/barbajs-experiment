@@ -1,0 +1,132 @@
+/* variables declaration */
+
+//font attach
+@font-face {
+    font-family: "Poppins-Light";
+    src: url("../fonts/Poppins-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Poppins-Bold";
+    src: url("../fonts/Poppins-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Poppins-Medium";
+    src: url("../fonts/Poppins-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Poppins-Regular";
+    src: url("../fonts/Poppins-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Poppins-SemiBold";
+    src: url("../fonts/Poppins-SemiBold.ttf") format("truetype");
+}
+
+//font family
+$pf: "Poppins-Light";
+$lb: "Poppins-Bold";
+$ll: "Poppins-Medium";
+$lr: "Poppins-Regular";
+$lblack: "Poppins-SemiBold";
+// media query
+$mq5b: "screen and (max-width: 320px)";
+$mq3b7: "screen and (max-width: 375px)";
+$mq4b: "screen and (max-width: 425px)";
+$mq5b7: "screen and (max-width: 575px)";
+$mq7b: "screen and (max-width: 767px)";
+$mobile_landscape: "screen and (max-width: 767px) and (orientation:landscape)";
+$mq9b: "screen and (max-width: 991px)";
+$mq10b: "screen and (max-width: 1023px)";
+$mq12b: "screen and (max-width: 1199px)";
+$mq5a: "screen and (min-width: 566px)";
+$mq7a: "screen and (min-width: 768px)";
+$mq9a: "screen and (min-width: 992px)";
+$mq10a: "screen and (min-width: 1024px)";
+$mq12a: "screen and (min-width: 1200px)";
+$mq16a: "screen and (min-width: 1600px)";
+$tablet: "screen and (device-width: 768px)";
+$ipad_pro: "screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait)";
+$tablet_orientation: "screen and (min-width: 1024px) and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5)";
+$fhd: "screen and (min-width: 1920px)";
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $lr !important;
+    height: 100vh;
+    background-color: rgb(240, 240, 240) !important;
+}
+
+.overlay {
+    background-color: #000;
+    height: 100vh;
+    width: 100%;
+    z-index: 10;
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    transform: scaleY(0);
+}
+
+.wrapper {
+    padding: 1em;
+    height: 90%;
+    header {
+        nav {
+            ul {
+                list-style-type: none;
+                display: flex;
+                padding: 0 0 10px 0;
+                margin-right: auto;
+                border-bottom: 1px solid #dedede;
+                li {
+                    padding: 0 10px 0 10px;
+                    a {
+                        color: #000;
+                    }
+                }
+            }
+        }
+    }
+    @media #{$mq7a} {
+        main {
+            padding-top: 20px;
+            display: flex;
+            height: 100%;
+            align-items: center;
+            .left {
+                width: 50%;
+                float: left;
+                h1 {
+                    font: 45px $lb;
+                    span {
+                        color: #932a33;
+                    }
+                }
+                a {
+                    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+                    border-radius: 5px;
+                    width: 100%;
+                    display: block;
+                    background-color: #fff;
+                    color: #000;
+                    padding: 20px;
+                    text-decoration: none;
+                }
+            }
+            img {
+                width: 40%;
+                clip-path: polygon(0 0, 100% 0, 0 0);
+            }
+        }
+    }
+}
